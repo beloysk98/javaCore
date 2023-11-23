@@ -6,7 +6,6 @@ package javaCore.src.lesson1_3.levelB.b1;
 public class Run {
     public static void main(String[] args) {
         int var1 = 83;
-        double x = Math.sqrt(var1);
-        System.out.println("Квадратный корень из числа: "+var1+" ,равен: "+x);
+        System.out.println("Квадратный корень из числа: "+var1+" ,равен: "+Math.sqrt(var1));
     }
 }
