@@ -17,7 +17,6 @@ import java.util.Scanner;
 //              d  a
 public class run {
     public static void main(String[] args) {
-        double cosAC;
         Scanner scan = new Scanner(System.in);
         System.out.print("Введите длину стороны ab: ");
         int varA = scan.nextInt();
