@@ -21,6 +21,7 @@ public class Run {
         D = (varB * varB) - ((4 * varA * varC));
         if (varA == 0) {
             System.out.println("Переменная 'a' не может быть равна нулю.");
+            // почему она не может быть равна нулю?)
         } else {
             if (D > 0) {
                 double x1 = (-varB + D) / (2 * varA);
