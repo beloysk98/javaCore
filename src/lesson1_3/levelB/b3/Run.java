@@ -10,7 +10,9 @@ public class Run {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Введите длину первого катета: ");
+        // в строчке ниже у нас просто неизвестная переменная или мы более точно знаем что там хранится?
         int var1 = scan.nextInt();
+        // может дать более поятное название чтобы понимать что туда сохранили?
         System.out.print("Введите длину второго катета: ");
         int var2 = scan.nextInt();
         double varKor1 = Math.pow(var1, 2);
