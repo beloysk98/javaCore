@@ -5,7 +5,6 @@ package javaCore.src.lesson1_2.levelA.a1;
 каждого примитивного типа и присвойте им любые произвольные значения. Напишите код,
 который будет выводить значение каждой переменной в консоль.
 
-
  */
 public class Run {
     public static void main(String[] args) {
