@@ -30,3 +30,4 @@ bin/
 .DS_Store
 javaCore/
 com/
+/javaCore.iml
