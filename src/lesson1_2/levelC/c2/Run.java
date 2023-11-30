@@ -7,7 +7,7 @@ package javaCore.src.lesson1_2.levelC.c2;
  */
 public class Run {
     public static void main(String[] args) {
-        System.out.println(Mounth.getSeason(Mounth.AUGUST));
+        System.out.println(Mounth.getSeason(Mounth.AUGUST).getInfo());
 
     }
 }
