@@ -10,7 +10,7 @@ public class Run {
         int value = 10;
         while (value <= 10 && value >= 0) {
             System.out.print(value + " ");
-            value = value - 1;
+            value--;
 
         }
     }
