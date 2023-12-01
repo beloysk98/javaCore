@@ -11,11 +11,12 @@ public class Run {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Введите код от домофона: ");
-        boolean codeOn = false;
-        while (!codeOn) {
+        boolean codeOn = true;
+        while (codeOn) {
             String code = scan.nextLine();
-            if (codeOn = code.equals("1234")) {
+            if (code.equals("1234")) {
                 System.out.println("Дверь открыта.");
+                codeOn = false;
             } else {
                 System.out.print("Код не верный, повторите ввод: ");
             }
