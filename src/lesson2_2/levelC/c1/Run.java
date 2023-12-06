@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class Run {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
         boolean off = true;
         while (off) {
             System.out.print("Введите число: ");
