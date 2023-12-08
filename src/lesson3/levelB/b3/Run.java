@@ -14,20 +14,18 @@ public class Run {
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 10);
             System.out.print(array[i] + ",");
-        }
-        for (int j = 0; j < array.length; j++) {
-            if (valueMax < array[j]) {
-                valueMax = array[j];
-                indexMax = j;
+            if (valueMax < array[i]) {
+                valueMax = array[i];
+                indexMax = i;
             }
-            if (array[0] > array[j]) {
-                array[0] = array[j];
-                indexMin = j;
+            if (array[0] > array[i]) {
+                array[0] = array[i];
+                indexMin = i;
             }
+
         }
         System.out.println();
         System.out.println("Максимальное число : " + valueMax + ", его индекс: " + indexMax);
         System.out.println("Минимальное число: " + array[0] + ", его индекс: " + indexMin);
-
     }
 }
