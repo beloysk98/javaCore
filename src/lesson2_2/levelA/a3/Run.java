@@ -8,9 +8,8 @@ public class Run {
         int value = 1;
         for (int i = 2; i <= 10; i++) {
             value = value + i;
-            System.out.print(value + " ");
         }
+        System.out.print(value + " ");
     }
-    // то, что я увидел в консоли: 3 6 10 15 21 28 36 45 55
-    // а что нужно вывести в консоль?
+
 }
