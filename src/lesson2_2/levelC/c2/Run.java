@@ -9,7 +9,7 @@ package javaCore.src.lesson2_2.levelC.c2;
  */
 public class Run {
     public static void main(String[] args) {
-        Integer[] mas = new Integer[4];
+        Integer[] mas = new Integer[4]; // для чего была создана переменная mas?
         for (int i = 1000; i <= 9999; i++) {
             int value1 = i / 1000;
             int value2 = i / 100 % 10;
