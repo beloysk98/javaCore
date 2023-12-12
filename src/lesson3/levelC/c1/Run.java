@@ -11,7 +11,7 @@ public class Run {
         for (int i = 0; i < twoArray.length; i++) {
             for (int j = 0; j < twoArray[0].length; j++) {
                 twoArray[i][j] = (int) (Math.random() * 100);
-                System.out.print(" " + twoArray[i][j] + " ");
+                System.out.print("для какой красоты этот пробел был здесь?) посмотри что делает \t " + twoArray[i][j] + " ");
             }
             System.out.println();
         }
