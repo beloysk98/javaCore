@@ -8,7 +8,7 @@ package javaCore.src.lesson2_2.levelA.a2;
 public class Run {
     public static void main(String[] args) {
         int value = 10;
-        while (value <= 10 && value >= 0) {
+        while (value >= 0) {
             System.out.print(value + " ");
             value--;
 
