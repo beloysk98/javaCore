@@ -10,7 +10,6 @@ import java.util.Arrays;
 public class Run {
     public static void main(String[] args) {
         int[] array = new int[10];
-        int minValue = 0; // для чего эта переменная?
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 10);
         }
