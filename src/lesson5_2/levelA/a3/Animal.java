@@ -31,7 +31,7 @@ class chordates extends multicellular {
 }
 
 //под-тип позвоночные
-class Vertebrates extends chordates {
+class vertebrates extends chordates {
     @Override
     void voice() {
         super.voice();
