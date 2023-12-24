@@ -7,15 +7,34 @@ package javaCore.src.lesson5_2.levelA.a3;
  */
 public class Animal {
     void voice() {
+        System.out.println("Царство животные\n");
+    }
+
+}
+
+///подцарства : многоклеточные
+class multicellular extends Animal {
+    @Override
+    void voice() {
+        super.voice();
+        System.out.println("Многоклеточные\n");
     }
 }
 
-class fish extends Animal {
-
+//типы : хордовые
+class chordates extends multicellular {
+    @Override
+    void voice() {
+        super.voice();
+        System.out.println("Хордовые\n");
+    }
 }
 
-class fishFamily extends fish {
-}
-
-class squads extends fishFamily {
+//под-тип позвоночные
+class Vertebrates extends chordates {
+    @Override
+    void voice() {
+        super.voice();
+        System.out.println("Позвоночные");
+    }
 }
