@@ -13,6 +13,10 @@ public class Run {
         comShop.name();
         supMar.name();
         supMar.pizzaDepartment();
+        Info nameShop = new Worker();
+        Info d = new Products();
+        nameShop.name();
+        d.name();
 
 
     }
