@@ -13,7 +13,23 @@ public class Shop {
     private String color;
     private String assortment;
 
-    void name() {
+    public Shop() {
+
+    }
+
+    public Shop(int size) {
+        this.size = size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void name() {
         System.out.println("Название магазина");
     }
 

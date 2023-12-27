@@ -2,7 +2,7 @@ package javaCore.src.lesson5_2.levelC.c2;
 
 //комерческие магазины
 public class CommercialShop extends Shop {
-    void name() {
+    public void name() {
         System.out.println("Комерческий");
     }
 

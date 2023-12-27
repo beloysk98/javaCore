@@ -2,10 +2,19 @@ package javaCore.src.lesson5_2.levelC.c2;
 
 public class Run {
     public static void main(String[] args) {
-        Shop shop = new Shop();
-        shop.name();
+        //полиморфизм(один метод может рабоать с разными параметрами)
+        Shop shops = new Shop();
+        Shop shop = new Shop(23);
+
         CommercialShop comShop = new CommercialShop();
+        Supermarkets supMar = new Supermarkets();
+        shops.name();
+        shop.name();
         comShop.name();
-        comShop.markupPercentage();
+        supMar.name();
+        supMar.pizzaDepartment();
+
+
     }
 }
+
