@@ -10,15 +10,15 @@ public class Proverka {
     void operator(String inputNumber) {
         fillCode(inputNumber);
         if (isTown()) {
-            System.out.println("Оператор белТелеком");
+            thisTown();
         } else if (isHybrid()) {
             checkFirstNumber();
         } else if (isMTS()) {
-            System.out.println("Оператор MTC");
+            thisMTS();
         } else if (isA1()) {
-            System.out.println("Оператор Velcome");
+            thisA1();
         } else {
-            System.out.println("Такого оператора РБ не существует");
+            thisError();
         }
     }
 
@@ -31,9 +31,9 @@ public class Proverka {
 
     private void checkFirstNumber() {
         if (isNumberMTS()) {
-            System.out.println("Оператор MTC");
+            thisMTS();
         } else {
-            System.out.println("Оператор Velcome");
+            thisA1();
         }
     }
 
@@ -55,6 +55,22 @@ public class Proverka {
 
     private boolean isMTS() {
         return repNew24.equals("33") || repNew35.equals("33");
+    }
+
+    private void thisTown() {
+        System.out.println("Оператор белТелеком");
+    }
+
+    private void thisA1() {
+        System.out.println("Оператор Velcome");
+    }
+
+    private void thisMTS() {
+        System.out.println("Оператор MTC");
+    }
+
+    private void thisError() {
+        System.out.println("Такого оператора РБ не существует");
     }
 
 }
