@@ -1,19 +1,63 @@
 package javaCore.src.lesson6.levelA.a3;
 
+import java.util.Scanner;
 
 public class Info {
+    private String symbolFirst;
+    private String symbolSecond;
+    private String first;
+    private String second;
 
-    // на вход может быть передана строка в виде вектора и в виде: "{5, 2, 7}"
-    void info(String str) {
-        if (str.equals("1")) {
-            System.out.println("скаляр");
-        } else if (str.equals("{1, 2, 3}")) {
-            System.out.println("вектор");
-        } else {
-            System.out.println("матрица");
+    void info() {
+        String inputString = inputString();
+        replaceSymbol(inputString);
+        proverka();
+    }
+
+    private void replaceSymbol(String inStr) {
+
+        first = inStr.substring(0, 1);
+        if (inStr.length() > 1) {
+            second = inStr.substring(0, 2);
         }
     }
 
+    private void proverka() {
+        symbolFirst = "{";
+        symbolSecond = "{{";
+        if (isMatrix()) {
+            thisMatrix();
+        } else if (isVector()) {
+            thisVector();
+        } else {
+            thisSkalyar();
+        }
+    }
 
+    private void thisSkalyar() {
+        System.out.println("скаляр");
+    }
+
+    private void thisMatrix() {
+        System.out.println("Матрица");
+    }
+
+    private void thisVector() {
+        System.out.println("Вектор");
+    }
+
+    private boolean isVector() {
+        return symbolFirst.equals(first);
+    }
+
+    private boolean isMatrix() {
+        return symbolSecond.equals(second);
+    }
+
+    private String inputString() {
+        System.out.println("Введите данные для проверки: ");
+        return new Scanner(System.in).nextLine();
+    }
 }
+
 

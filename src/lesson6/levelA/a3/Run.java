@@ -10,15 +10,8 @@ package javaCore.src.lesson6.levelA.a3;
 
  */
 public class Run {
-    private static final String str1 = "1";
-    private static final String str2 = "{1, 2, 3}";
-    private static final String str3 = "{{1,2}, {3, 4}}";
-
     public static void main(String[] args) {
         Info ad = new Info();
-        ad.info(str1);
-        ad.info(str2);
-        ad.info(str3);
-
+        ad.info();
     }
 }
