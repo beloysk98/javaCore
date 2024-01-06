@@ -11,6 +11,7 @@ package javaCore.src.lesson6.levelA.a1;
 Александр: Какие строки храниятся в String Pool?
 Одинаковые строки хранятся, кроме обьектов
 
+
  */
 public class StringPool {
     public static void main(String[] args) {
