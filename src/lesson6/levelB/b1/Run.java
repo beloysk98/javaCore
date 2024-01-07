@@ -8,6 +8,6 @@ public class Run {
     public static void main(String[] args) {
         TestPolindrom proverka = new TestPolindrom();
         proverka.print();
-        // как-то криво код написан)
+
     }
 }

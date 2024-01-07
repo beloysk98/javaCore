@@ -3,22 +3,54 @@ package javaCore.src.lesson6.levelB.b1;
 import java.util.Scanner;
 
 public class TestPolindrom {
-    private Scanner scan = new Scanner(System.in);
-    private String word;
-
+    private String replaceSpaces;
+    private String reversalLine;
     void print() {
-        System.out.print("Введите слово для проверки: ");
-        word = scan.nextLine();
-        String replProbel = word.replaceAll(" ", "");
-        StringBuilder rever = new StringBuilder(replProbel);
-        rever.reverse();
-        String reverString = rever.toString();
-        System.out.println(rever);
-        if (replProbel.equals(reverString)) {
-            System.out.println("Слово/словосочетание полиндром");
+        String inputString = inputString();
+        String toUpLetters = toUpLetters(inputString);
+        replaceSpaces = replaceSpaces(toUpLetters);
+        reversalLine = reversalLine(replaceSpaces);
+        proverka();
+    }
+
+    private String toUpLetters(String toUp) {
+        return toUp.toUpperCase();
+    }
+
+    private void proverka() {
+        if (isPolindrom()) {
+            thisPolindrom();
         } else {
-            System.out.println("Слово/словосочетание не полиндром");
+            thisNotPolindrom();
         }
+
+    }
+
+    private void thisNotPolindrom() {
+        System.out.println("Слово/словосочетание не полиндром");
+    }
+
+    private void thisPolindrom() {
+        System.out.println("Слово/словосочетание полиндром");
+    }
+
+    private boolean isPolindrom() {
+        return replaceSpaces.equals(reversalLine);
+    }
+
+    private String reversalLine(String str) {
+        StringBuilder rever = new StringBuilder(str);
+        rever.reverse();
+        return rever.toString();
+    }
+
+    private String replaceSpaces(String inStr) {
+        return inStr.replaceAll(" ", "");
+    }
+
+    private String inputString() {
+        System.out.print("Введите слово для проверки: ");
+        return new Scanner(System.in).nextLine();
     }
 }
 
