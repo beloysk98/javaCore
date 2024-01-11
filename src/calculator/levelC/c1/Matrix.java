@@ -5,7 +5,7 @@ public class Matrix extends Var {
     private String strMatrix;
     private Matrix matrix;
 
-
+// не выполнено условие задачи: Каждый конструктор должен сохранить переданное значение в переменнУЮ класса.
     public Matrix(double[][] value) {
         this.value = value;
     }
