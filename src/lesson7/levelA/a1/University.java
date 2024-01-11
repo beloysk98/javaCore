@@ -12,6 +12,6 @@ public class University {
     public void printInfo() {
         igor.printInfoStudent();
     }
-
+// что-то не вижу тут внутреннего класса Student
 
 }
