@@ -20,6 +20,7 @@ public class Matrix extends Var {
 
     @Override
     public String toString() {
+        // этот метод должен выводить содержимое этого класса, т е то, что хранит переменная.
         return "Matrix{}";
     }
 }
