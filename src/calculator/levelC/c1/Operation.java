@@ -8,5 +8,5 @@ public interface Operation {
     double multiply(double a, double b);//умножение
 
     double divide(double a, double b);//деление
-
+// дополнил условие задачи. а то увидел не то, что ожидал.
 }
