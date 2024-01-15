@@ -2,25 +2,20 @@ package javaCore.src.calculator.levelC.c1;
 
 public class Matrix extends Var {
     private double[][] value;
-    private String strMatrix;
-    private Matrix matrix;
-
-// не выполнено условие задачи: Каждый конструктор должен сохранить переданное значение в переменнУЮ класса.
     public Matrix(double[][] value) {
         this.value = value;
     }
 
     public Matrix(Matrix matrix) {
-        this.matrix = matrix;
+        this.value = matrix.value;
     }
 
     public Matrix(String strMatrix) {
-        this.strMatrix = strMatrix;
+        this.value = new double[][]{{Double.parseDouble(strMatrix)}};
     }
 
     @Override
     public String toString() {
-        // этот метод должен выводить содержимое этого класса, т е то, что хранит переменная.
-        return "Matrix{}";
+        return String.valueOf(value);
     }
 }

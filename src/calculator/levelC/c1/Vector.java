@@ -1,25 +1,27 @@
 package javaCore.src.calculator.levelC.c1;
 
+import java.util.Arrays;
+
 public class Vector extends Var {
     private double[] value;
-    private String strVector;
-    private Vector vector;
-
 
     public Vector(double[] value) {
         this.value = value;
     }
 
     public Vector(Vector vector) {
-        this.vector = vector;
+        this.value = new double[]{vector.value[0]};
     }
 
     public Vector(String strVector) {
-        this.strVector = strVector;
+        String[] firstSplit = strVector.split(",");
+        for (int i = 0; i < firstSplit.length; i++) {
+            this.value[i] = Double.parseDouble(firstSplit[i]);
+        }
     }
 
     @Override
     public String toString() {
-        return "Vector{}";
+        return Arrays.toString(value);
     }
 }
