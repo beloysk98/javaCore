@@ -14,10 +14,13 @@ public class Vector extends Var {
     }
 
     public Vector(String strVector) {
-        String[] firstSplit = strVector.split(",");
+        String replaceSpace = strVector.replace(" ", "");
+        String[] firstSplit = replaceSpace.split(",");
+        double[] value = new double[firstSplit.length];
         for (int i = 0; i < firstSplit.length; i++) {
-            this.value[i] = Double.parseDouble(firstSplit[i]);
+            value[i] = Double.parseDouble(firstSplit[i]);
         }
+        this.value = value;
     }
 
     @Override
