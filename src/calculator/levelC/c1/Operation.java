@@ -1,12 +1,12 @@
 package javaCore.src.calculator.levelC.c1;
 
-public interface Operation {
-    double add(Var a, Var b);//сума
+public interface Operation<T> {
+    T add(T operation);//сума
 
-    double subtract(Var a, Var b);//разность
+    T subtract(T operation);//разность
 
-    double multiply(Var a, Var b);//умножение
+    T multiply(T operation);//умножение
 
-    double divide(Var a, Var b);//деление
-// дополнил условие задачи. а то увидел не то, что ожидал.
+    T divide(T operation);//деление
+
 }

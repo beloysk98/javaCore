@@ -1,4 +1,4 @@
-package javaCore.src.lesson8.levelA.levelB.b1;
+package javaCore.src.lesson8.levelB.b1;
 
 /*
 Реализовать метод setElement, который будет сохранять в первую свободную ячейку элемент.
@@ -9,23 +9,23 @@ package javaCore.src.lesson8.levelA.levelB.b1;
 */
 public class Run {
     public static void main(String[] args) {
-        Array<Object> setElemenT = new Array<>();
-        setElemenT.setElement("231");
-        setElemenT.setElement(542);
-        setElemenT.setElement(2.5);
-        setElemenT.setElement(2.5);
-        setElemenT.setElement(2.5);
-        setElemenT.setElement(2.5);
-        setElemenT.setElement(2.5);
-        setElemenT.setElement(2.5);
-        setElemenT.setElement(2.5);
-        setElemenT.setElement(2.5);
-        setElemenT.setElement(2.5);
-        Array<Object> getElemenT = new Array<>();
-        getElemenT.getElement(1);
-        Array<Object> conTains = new Array<>();
-
-        //setElemenT.printArray();
+        Array list = new Array();
+        list.setElement("231");
+        list.setElement(542);
+        list.setElement(2);
+        list.setElement(2.5);
+        list.setElement(2.5);
+        list.setElement(2.5);
+        list.setElement(2.5);
+        list.setElement(2.5);
+        list.setElement(2.5);
+        list.setElement(2.5);
+        list.setElement(2.9);
+        list.setElement(5);
+        System.out.println(list.getElement(1));
+        System.out.println(list.contains(2));
+        System.out.println(list.getIndex(542));
+        list.printArray();
 
 
     }
