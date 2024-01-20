@@ -1,12 +1,12 @@
 package javaCore.src.calculator.levelC.c1;
 
 public interface Operation<T> {
-    T add(T operation);//сума
+    void add(T firstObject, T secondObject);//сума
 
-    T subtract(T operation);//разность
+    void subtract(T firstObject, T secondObject);//разность
 
-    T multiply(T operation);//умножение
+    void multiply(T firstObject, T secondObject);//умножение
 
-    T divide(T operation);//деление
+    void divide(T firstObject, T secondObject);//деление
 
 }
