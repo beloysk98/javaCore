@@ -13,10 +13,16 @@ public class Group {
         this.students.add(student);
     }
 
+    public Student get(int index) {
+        return students.get(index);
+    }
+
     public void print() {
+        System.out.println("Список группы: ");
         for (int i = 0; i < students.size(); i++) {
             System.out.println(students.get(i).toString());
         }
+        System.out.println("\t");
     }
 
 }

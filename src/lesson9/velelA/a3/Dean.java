@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Dean {
     static Group da = new Group();
     static ArrayList<Integer> ratings = new ArrayList<>();
-    static ArrayList<Integer> stipendia = new ArrayList<>();
+    static ArrayList<Student> stipendia = new ArrayList<>();
 
     public static void main(String[] args) {
         da.add(new Student("Олег", 24, rating()));
@@ -36,8 +36,9 @@ public class Dean {
         da.add(new Student("Маша", 24, rating()));
         da.add(new Student("Света", 24, rating()));
         da.add(new Student("Таня", 25, rating()));
-        //da.print();
+        da.print();
         sredn();
+        printFF();
     }
 
     private static int rating() {
@@ -49,8 +50,15 @@ public class Dean {
     private static void sredn() {
         for (int i = 0; i < ratings.size(); i++) {
             if (ratings.get(i) >= 6) {
-                stipendia.add(ratings.get(i));
+                stipendia.add(da.get(i));
             }
+        }
+    }
+
+    private static void printFF() {
+        System.out.println("Степендию получат:\t");
+        for (Student student : stipendia) {
+            System.out.println(student);
         }
     }
 }
