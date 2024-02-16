@@ -47,7 +47,7 @@ public class Dean {
         return (int) g;
     }
 
-    private static void sredn() {
+    private static void sredn() { // ай донт андэстэнд инглиш, транслэйт плиз
         for (int i = 0; i < ratings.size(); i++) {
             if (ratings.get(i) >= 6) {
                 stipendia.add(da.get(i));
