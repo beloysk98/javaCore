@@ -7,20 +7,20 @@ import java.util.List;
     факультета и список групп этого факультета
  */
 public class Faculty {
-    private String nameFacul;
+    private String nameFaculty;
     private List<Group> groups;
 
-    public Faculty(String nameFacul, List<Group> groups) {
-        this.nameFacul = nameFacul;
+    public Faculty(String nameFaculty, List<Group> groups) {
+        this.nameFaculty = nameFaculty;
         this.groups = groups;
     }
 
-    public String getNameFacul() {
-        return nameFacul;
+    public String getNameFaculty() {
+        return nameFaculty;
     }
 
-    public void setNameFacul(String nameFacul) {
-        this.nameFacul = nameFacul;
+    public void setNameFaculty(String nameFaculty) {
+        this.nameFaculty = nameFaculty;
     }
 
     public List<Group> getGroups() {
@@ -33,7 +33,7 @@ public class Faculty {
 
     @Override
     public String toString() {
-        return nameFacul +
+        return nameFaculty +
                 ", группа = " + groups;
     }
 }
