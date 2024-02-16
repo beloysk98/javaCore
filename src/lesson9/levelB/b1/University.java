@@ -4,24 +4,24 @@ package javaCore.src.lesson9.levelB.b1;
 import java.util.List;
 
 public class University {
-    private String nameUn;
+    private String nameUniversity;
     private List<Faculty> faculties;
 
     public University() {
 
     }
 
-    public University(String nameUn, List<Faculty> faculties) {
-        this.nameUn = nameUn;
+    public University(String nameUniversity, List<Faculty> faculties) {
+        this.nameUniversity = nameUniversity;
         this.faculties = faculties;
     }
 
-    public String getNameUn() {
-        return nameUn;
+    public String getNameUniversity() {
+        return nameUniversity;
     }
 
-    public void setNameUn(String nameUn) {
-        this.nameUn = nameUn;
+    public void setNameUniversity(String nameUniversity) {
+        this.nameUniversity = nameUniversity;
     }
 
     public List<Faculty> getFaculties() {
@@ -34,7 +34,7 @@ public class University {
 
     @Override
     public String toString() {
-        return "Название университета: " + nameUn +
+        return "Название университета: " + nameUniversity +
                 ", список факультета : " + faculties;
     }
 }
