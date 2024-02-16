@@ -28,11 +28,17 @@ public class Runner {
 
         List<Group> groups = new ArrayList<>();
         groups.add(new Group(1, studentsOne));
+        groups.add(new Group(1, studentsTwo));
+        groups.add(new Group(1, studentsThree));
 
         List<Group> groupsTwo = new ArrayList<>();
+        groupsTwo.add(new Group(2, studentsOne));
         groupsTwo.add(new Group(2, studentsTwo));
+        groupsTwo.add(new Group(2, studentsThree));
 
         List<Group> groupsThree = new ArrayList<>();
+        groupsThree.add(new Group(3, studentsOne));
+        groupsThree.add(new Group(3, studentsTwo));
         groupsThree.add(new Group(3, studentsThree));
 
         List<Faculty> faculties = new ArrayList<>();
@@ -41,13 +47,25 @@ public class Runner {
         faculties.add(new Faculty("\nФакультет биологии", groupsTwo));
         List<Faculty> facultiesThree = new ArrayList<>();
         faculties.add(new Faculty("\nФакультет Физ. подготовка", groupsThree));
+        University university = new University("Минский университет", faculties);
+        System.out.println(university);
+        System.out.println("Средний бал по университету: " + calculateAverageScore(university));
 
-        List<University> universities = new ArrayList<>();
-        universities.add(new University("Минский университет", faculties));
+    }
 
+    public static double calculateAverageScore(University university) {
+        double totalScore = 0.0;
+        int totalStudents = 0;
 
-        for (University university : universities) {
-            System.out.println(university);
+        for (Faculty faculty : university.getFaculties()) {
+            for (Group group : faculty.getGroups()) {
+                for (Student student : group.getStudents()) {
+                    totalScore += student.getAverageScore();
+                    totalStudents++;
+                }
+            }
         }
+
+        return totalScore / totalStudents;
     }
 }
