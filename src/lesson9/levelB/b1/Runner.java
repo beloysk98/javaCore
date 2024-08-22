@@ -28,17 +28,17 @@ public class Runner {
 
         List<Group> groups = new ArrayList<>();
         groups.add(new Group(1, studentsOne));
-        groups.add(new Group(1, studentsTwo));
-        groups.add(new Group(1, studentsThree));
+        groups.add(new Group(2, studentsTwo));
+        groups.add(new Group(3, studentsThree));
 
         List<Group> groupsTwo = new ArrayList<>();
-        groupsTwo.add(new Group(2, studentsOne));
+        groupsTwo.add(new Group(1, studentsOne));
         groupsTwo.add(new Group(2, studentsTwo));
-        groupsTwo.add(new Group(2, studentsThree));
+        groupsTwo.add(new Group(3, studentsThree));
 
         List<Group> groupsThree = new ArrayList<>();
-        groupsThree.add(new Group(3, studentsOne));
-        groupsThree.add(new Group(3, studentsTwo));
+        groupsThree.add(new Group(1, studentsOne));
+        groupsThree.add(new Group(2, studentsTwo));
         groupsThree.add(new Group(3, studentsThree));
 
         List<Faculty> faculties = new ArrayList<>();
@@ -48,7 +48,6 @@ public class Runner {
         List<Faculty> facultiesThree = new ArrayList<>();
         faculties.add(new Faculty("\nФакультет Физ. подготовка", groupsThree));
         University university = new University("Минский университет", faculties);
-        System.out.println(university);
         System.out.println("Средний бал по университету: " + calculateAverageScore(university));
 
     }
